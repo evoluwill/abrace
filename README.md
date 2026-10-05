@@ -21,3 +21,25 @@ Projeto acadêmico de uma ONG fictícia, reorganizado como Single Page Applicati
 Abra a pasta `abrace` no VS Code, inicie o Live Server e acesse `html/index.html`.
 
 A navegação utiliza as rotas `#inicio`, `#projetos` e `#contato`. O formulário é uma simulação acadêmica: os dados são armazenados somente no `localStorage` do navegador e não são enviados para um servidor real.
+
+## Versionamento
+
+O projeto utiliza uma estrutura de branches baseada no GitFlow:
+
+- main: destinada às versões estáveis do projeto.
+- develop: destinada à integração das alterações em desenvolvimento.
+- feature/documentacao: criada para melhorar a documentação do projeto.
+
+As alterações das branches feature devem ser revisadas por meio de pull requests antes da integração à develop. Quando uma versão estiver pronta e validada, será integrada à main.
+
+## Padrão de commits
+
+As próximas alterações utilizarão mensagens com os seguintes prefixos:
+
+- feat: nova funcionalidade.
+- fix: correção de um problema.
+- docs: alteração na documentação.
+- style: ajustes de formatação do código.
+- refactor: reorganização do código sem alterar seu comportamento.
+- test: inclusão ou atualização de testes.
+- chore: tarefas de manutenção e configuração.
