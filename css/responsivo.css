@@ -1,0 +1,50 @@
+@media(max-width:800px){
+  .container,.projetos-largos{width:min(100% - 1.5rem,1180px)}
+  .site-header{display:block;padding-block:1rem}
+  .marca img{width:180px;margin-bottom:.8rem}
+  nav ul{flex-wrap:wrap}
+  .grid{gap:1.1rem}
+  .grid>[class*=col-]{grid-column:1/-1}
+  .hero{min-height:680px}
+  .hero-imagem img{object-position:64% center}
+  .hero-grade{align-items:end;padding-bottom:1.5rem}
+  .hero-conteudo{padding:1.5rem;box-shadow:7px 7px 0 var(--coral)}
+  .hero::after{width:85vw}
+  .dados{grid-template-columns:1fr 1fr}
+  .titulo-com-rabisco::after{left:45%;top:65%;width:220px;opacity:.55}
+  .projeto{margin-bottom:3.4rem}
+  .projeto-imagem{height:clamp(340px,76vw,520px)}
+  .projeto-conteudo,.projeto:nth-of-type(odd) .projeto-conteudo,.projeto:nth-of-type(even) .projeto-conteudo{width:calc(100% - 1rem);margin:-2.2rem auto 0;padding:1.35rem}
+  .projeto::before{width:120px;opacity:.75}
+  .projeto-numero{font-size:clamp(4.8rem,16vw,7rem);text-align:left}
+  .ficha{grid-template-columns:1fr 1fr 1fr}
+  .cabecalho-pagina{padding:.8rem}
+  .banner-texto{padding:1.3rem}
+  .banner-imagem{min-height:330px}
+  .como-funciona{position:static}
+  .formulario{padding-left:0}
+  .intro-texto,.chamada-final-acao{padding-left:0;border-left:0}
+  .chamada-final-cartao{padding:1.6rem;box-shadow:7px 7px 0 var(--coral)}
+  .rodape-base{bottom:0}
+}
+
+@media(max-width:520px){
+  h1{font-size:clamp(2.8rem,14vw,4.5rem)}
+  .dados,.ficha,.campos-grid{grid-template-columns:1fr}
+  .dados li{padding:.65rem 0}
+  .projeto-imagem{height:360px}
+  .projeto-imagem img{object-position:center}
+  .projeto-conteudo .numero{margin-bottom:.3rem}
+  .projeto-numero{text-align:center}
+  .ficha div{min-height:auto;padding:.85rem}
+  .chamada-final{padding:2.5rem 0}
+  .rodape-base{display:flex;min-height:48px;gap:.5rem;padding:.65rem 0;font-size:.75rem}
+  .toast{right:1rem;bottom:1rem}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .conteudo-pagina{animation:none}
+  .botao,button,.toast,.revelar,.cartao,.ficha div{transition:none!important}
+  .js .revelar,.js .revelar.visivel,.js .cartao.revelar.visivel{opacity:1;transform:none}
+}

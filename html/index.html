@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abrace conecta crianças, famílias e voluntários em ações de educação, segurança alimentar e cultura na zona leste de São Paulo.">
+  <title>Início | Abrace</title>
+  <link rel="icon" href="../imagens/logos/favicon-abrace.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/responsivo.css">
+</head>
+<body>
+  <a class="pular-conteudo" href="#app">Ir para o conteúdo principal</a>
+
+  <header class="site-header container">
+    <a class="marca" href="#inicio" data-rota="inicio" aria-label="Abrace, página inicial">
+      <img src="../imagens/logos/logo-abrace.svg" width="2172" height="724" alt="Abrace">
+    </a>
+
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="#inicio" data-rota="inicio">Início</a></li>
+        <li><a href="#projetos" data-rota="projetos">Projetos</a></li>
+        <li><a href="#contato" data-rota="contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="app" class="conteudo-pagina" tabindex="-1" aria-live="polite"></main>
+
+  <section class="chamada-final" aria-labelledby="titulo-chamada-final">
+    <div class="chamada-final-cartao container grid">
+      <div class="chamada-final-titulo col-7">
+        <span class="etiqueta">Chegue mais perto</span>
+        <h2 id="titulo-chamada-final">Tem espaço para você nesse abraço.</h2>
+      </div>
+      <div class="chamada-final-acao col-5">
+        <p>Participe como voluntário, parceiro ou apoiador e ajude a ampliar essa rede de cuidado.</p>
+        <a class="botao" href="#contato" data-rota="contato">Fale com a Abrace</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <picture class="rodape-ilustracao">
+      <source srcset="../imagens/ilustracoes/ilustracao-rodape.webp" type="image/webp">
+      <img src="../imagens/ilustracoes/ilustracao-rodape.png" width="2172" height="724" alt="" loading="lazy">
+    </picture>
+
+    <div class="rodape-base container">
+      <p>© 2026 Abrace</p>
+      <p>Zona leste de São Paulo · SP</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <span class="toast-icone" aria-hidden="true">✓</span>
+    <p id="toast-mensagem"></p>
+    <button class="toast-fechar" type="button" aria-label="Fechar aviso">×</button>
+  </div>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
