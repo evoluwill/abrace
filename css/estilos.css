@@ -166,3 +166,153 @@ button[type=submit]:disabled{cursor:wait;opacity:.72}
 .js .cartao.revelar.visivel{transform:perspective(900px) rotateX(var(--giro-x,0deg)) rotateY(var(--giro-y,0deg)) translate3d(0,0,0);transition:opacity .62s ease,transform .2s ease,box-shadow .2s ease}
 .js .cartao.cartao-em-movimento{box-shadow:9px 11px 0 var(--azul-escuro)}
 @keyframes entrada-pagina{from{opacity:.45;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+/* Alternância de tema */
+:root {
+  color-scheme: light;
+}
+
+.alternar-tema {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  min-height: 44px;
+  padding: .5rem .75rem;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tema-trilho {
+  display: inline-flex;
+  align-items: center;
+  width: 42px;
+  height: 24px;
+  padding: 3px;
+  border-radius: 999px;
+  background: #24326a;
+}
+
+.tema-indicador {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fffdf8;
+  transition: transform .2s ease;
+}
+
+.alternar-tema[aria-checked="true"] .tema-trilho {
+  background: #ffde66;
+}
+
+.alternar-tema[aria-checked="true"] .tema-indicador {
+  background: #24326a;
+  transform: translateX(18px);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #24326a;
+  outline-offset: 4px;
+}
+
+html[data-tema="escuro"] {
+  color-scheme: dark;
+  --creme: #121827;
+  --branco: #1e293b;
+  --erro: #ff9aab;
+  color: #f4f0e6;
+}
+
+/* Superfícies escuras */
+html[data-tema="escuro"] .hero-conteudo,
+html[data-tema="escuro"] .impacto,
+html[data-tema="escuro"] fieldset,
+html[data-tema="escuro"] .pular-conteudo {
+  background: #1e293b;
+  color: #f4f0e6;
+  border-color: #94a3b8;
+}
+
+html[data-tema="escuro"] input,
+html[data-tema="escuro"] select,
+html[data-tema="escuro"] textarea {
+  color: #f4f0e6;
+  border-color: #94a3b8;
+}
+
+html[data-tema="escuro"] input::placeholder,
+html[data-tema="escuro"] textarea::placeholder {
+  color: #cbd5e1;
+  opacity: 1;
+}
+
+html[data-tema="escuro"] .campo-invalido {
+  background: #3b1828;
+  border-color: #ff9aab;
+}
+
+html[data-tema="escuro"] .intro-texto,
+html[data-tema="escuro"] .dados li {
+  border-color: #94a3b8;
+}
+
+/* Mantém texto escuro sobre as cores da identidade */
+html[data-tema="escuro"] .cartao,
+html[data-tema="escuro"] .cabecalho-pagina,
+html[data-tema="escuro"] .projeto-conteudo,
+html[data-tema="escuro"] .case,
+html[data-tema="escuro"] .como-funciona,
+html[data-tema="escuro"] .chamada-final-cartao,
+html[data-tema="escuro"] .botao,
+html[data-tema="escuro"] legend,
+html[data-tema="escuro"] .etiqueta,
+html[data-tema="escuro"] .hero small,
+html[data-tema="escuro"] button[type="submit"],
+html[data-tema="escuro"] .toast,
+html[data-tema="escuro"] nav a:hover,
+html[data-tema="escuro"] nav a:focus-visible,
+html[data-tema="escuro"] nav a[aria-current="page"] {
+  color: #24326a;
+}
+
+html[data-tema="escuro"] .toast-icone {
+  background: #fffdf8;
+}
+
+html[data-tema="escuro"] .rodape-base {
+  color: #fffdf8;
+}
+
+html[data-tema="escuro"] a:focus-visible,
+html[data-tema="escuro"] button:focus-visible,
+html[data-tema="escuro"] input:focus-visible,
+html[data-tema="escuro"] select:focus-visible,
+html[data-tema="escuro"] textarea:focus-visible {
+  outline-color: #94a3b8;
+}
+
+.site-header {
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .alternar-tema {
+    margin-top: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tema-indicador {
+    transition: none;
+  }
+}
